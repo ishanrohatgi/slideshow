@@ -1,0 +1,24 @@
+:host{
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 2.8rem;
+    color: yellow;
+    font-weight: 900;
+
+}
+
+@media screen and (max-width: 500px) {
+    h1{
+        position: absolute;
+        top:0px;
+        width: 95%;
+        font-size: 2;
+    }
+    
+}

@@ -1,0 +1,71 @@
+:host{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slideshow-image{
+    border-radius: 1% 23%;
+    box-shadow: 10px 15px 10px 10px rgba(15, 45, 90, 0.753);
+    height: 450px;
+    width: 75vw;
+   
+}
+.action-button-prev{
+    position: relative;
+    left: 60px ;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: xx-large;
+    background-color: rgb(135, 135, 231);
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.753);
+    color: white;
+}
+.action-button-next{
+    position: relative;
+    right: 60px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: xx-large;
+    background-color: rgb(135, 135, 231);
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.753);
+    color: white;
+
+}
+
+.dots-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    position: relative;
+    top:-40px;
+}
+
+.dot{
+    border: 1px solid blue;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    border: none;
+    background-color: rgb(135, 135, 231);
+    box-shadow: 0px 0px 10px 2px black ;
+    transition:background-color 0.5s ease; ;
+}
+.active-dot{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    box-shadow: 0px 0px 8px 5px black ;
+    background-color: rgb(62, 62, 126);
+    outline: 1px solid rgb(0, 0, 0);
+}

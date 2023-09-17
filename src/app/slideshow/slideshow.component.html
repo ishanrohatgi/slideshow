@@ -1,0 +1,12 @@
+<app-widthalert *ngIf="displayWidth<=500"></app-widthalert>
+<div class="slide-show" *ngIf="displayWidth>500">
+    <div class="image-container">
+        <button class="action-button-prev" (click)="prev()"><</button>
+        <img  #slideShowImg [src]="imageUrl" alt="" class="slideshow-image">
+        <button class="action-button-next" (click)="next()">></button>
+        
+    </div>
+    <div class="dots-container" >
+        <button class="dot" *ngFor="let imageURL of imageList; index as i" (click)="imageChangeViaDots(i)" [ngClass]="{'active-dot': i === imageIndex }"></button>
+    </div>
+</div>

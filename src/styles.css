@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Pacifico&family=Press+Start+2P&family=Sacramento&display=swap');
+body{
+    background-color: rgb(108, 146, 146);
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Sacramento', cursive;
+    user-select: none;
+}
