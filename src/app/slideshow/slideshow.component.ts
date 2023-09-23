@@ -10,12 +10,30 @@ export class SlideshowComponent {
   @Input() imageList : { url: string}[]= [];
   imageUrl: string = '';
   imageIndex = 0;
+  startX=0;
   imageInterval: any;
   displayWidth = window.innerWidth;
 
   @HostListener('window:resize', ['$event'])
   onWindowResize(event: Event): void {
     this.displayWidth = window.innerWidth;
+  }
+
+  @HostListener('touchstart', ['$event'])
+  onTouchStart(event: TouchEvent) {
+    this.startX = event.touches[0].clientX;
+  }
+
+  @HostListener('touchend', ['$event'])
+  onTouchEnd(event: TouchEvent) {
+    const endX = event.changedTouches[0].clientX;
+    const deltaX = endX - this.startX;
+
+    if (deltaX > 0) {
+      this.next();
+    } else if (deltaX < 0) {
+      this.prev();
+    }
   }
 
   setImagInterval(){
